@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="wordCaseDescriptor">
+      <import location="primitiveAeDescriptorWordCase.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="emailAddressesDescriptor">
+      <import location="primitiveAeDescriptorEmailAddresses.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="wordLengthsDescriptor">
+      <import location="primitiveAeDescriptorWordLengths.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>BlueMix UIMA demonstration</name>
+    <description>A sample UIMA pipeline for running inside of a BlueMix application.</description>
+    <version>1.0</version>
+    <vendor>Dale Lane</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>emailAddressesDescriptor</node>
+        <node>wordCaseDescriptor</node>
+        <node>wordLengthsDescriptor</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -1,0 +1,8 @@
+applications:
+- host: uimahelloworld
+  disk: 1024M
+  name: uimahelloworld
+  path: uimaStarterApp.war
+  domain: ng.bluemix.net
+  mem: 512M
+  instances: 1

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UIMA Hello World for BlueMix</title>
+	<link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="apitester.js"></script>
+    <meta name="keywords" content="bluemix, uima, text, analytics, text analytics, ibm, apache">
+    <meta name="description" content="A sample application demonstrating how to do text analytics in a BlueMix application using Apache UIMA">
+</head>
+<body>
+	<h1>A UIMA Hello World for BlueMix</h1>
+    <hr>
+    <p>
+        This is a sample for how to do text analytics using 
+        <a href="http://uima.apache.org/">Apache UIMA</a> in a 
+        <a href="http://bluemix.net/">BlueMix</a> application. 
+    </p>
+    <p>
+        The "analytics" that the app is doing is trivial, but this is just a Hello World. 
+        It's intended to be an example of the config needed to define a UIMA analytics 
+        pipeline, wrap it in a REST API, and deploy it as a BlueMix application.
+    </p>
+    <p>
+        When I get a chance, I'll write a follow-up application that does something more useful. 
+    </p>
+    <p>
+        -- <a href="http://dalelane.co.uk/">Dale Lane</a> 
+    </p>
+    <hr>
+    <h2>More info</h2>
+    <ul>
+        <li>Read an explanation of the sample at <a href="http://dalelane.co.uk/blog/?p=3073">dalelane.co.uk/blog</a>
+        <li>Get the source code at <a href="https://github.com/dalelane/bluemixuima">github.com/dalelane/bluemixuima</a>
+        <li>Send me questions at <a href="http://twitter.com/dalelane">@dalelane</a>
+    </ul>
+    <hr>
+    <h2>API</h2>
+    <p>
+        To use it, POST plain text for processing to http://uimahelloworld.ng.bluemix.net/api and you'll get back a JSON payload with details of what was found in the text. 
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        $ curl -X POST -d "Process this text - Dale Lane (email@dalelane.co.uk)" -H "Accept: application/json" http://uimahelloworld.ng.bluemix.net/api 
+    </pre>
+    <p>Or you can try it using the form here:</p>
+    <div>
+        <textarea rows="8" cols="30" id="inputtext" placeholder="Enter sample text here and press the button below to see the API response"></textarea>
+    </div>
+    <div>
+        <button onclick="sendUimaRequest()">Submit API test request</button>    
+    </div>
+    <div>
+        <pre id="response"></pre>
+    </div>
+</body>
+</html>

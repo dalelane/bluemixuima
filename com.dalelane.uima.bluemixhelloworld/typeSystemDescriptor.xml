@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>BlueMix UIMA Hello World type system</name>
+  <description>Annotations created in the BlueMix sample project</description>
+  <version>1.0</version>
+  <vendor>Dale Lane</vendor>
+  <types>
+    <typeDescription>
+      <name>com.dalelane.uima.bluemixhelloworld.annotations.LongWord</name>
+      <description>An annotation applied to long words found in the provided text, where any word over seven letters long is considered long.</description>
+      <supertypeName>com.dalelane.uima.bluemixhelloworld.annotations.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>length</name>
+          <description>The number of characters in the word</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>com.dalelane.uima.bluemixhelloworld.annotations.Email</name>
+      <description>An annotation applied to strings that look like valid email addresses.</description>
+      <supertypeName>com.dalelane.uima.bluemixhelloworld.annotations.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>host</name>
+          <description>The hostname for the email address</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>user</name>
+          <description>The username for the email address</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>com.dalelane.uima.bluemixhelloworld.annotations.CapitalisedWord</name>
+      <description>An annotation applied to strings that are made up of a capital letter followed by one or more lower-case letters.</description>
+      <supertypeName>com.dalelane.uima.bluemixhelloworld.annotations.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>com.dalelane.uima.bluemixhelloworld.annotations.Annotation</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>
