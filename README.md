@@ -8,4 +8,5 @@ The "analytics" that the app is doing is trivial, but this is just a Hello World
 When I get a chance, I'll write a follow-up application that does something more useful.
 
 It's deployed to BlueMix at http://uimahelloworld.ng.bluemix.net 
+
 It's documented at http://dalelane.co.uk/blog/?p=3073 
