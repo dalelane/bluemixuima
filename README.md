@@ -1,5 +1,5 @@
-bluemixuima : A UIMA Hello World for BlueMix
-============================================
+A UIMA Hello World for BlueMix
+==============================
 
 This is a sample for how to do text analytics using Apache UIMA in a BlueMix application.
 
